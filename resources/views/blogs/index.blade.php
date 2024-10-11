@@ -28,14 +28,14 @@
                                     <h3>Latest Blogs</h3>
                                     <!-- Blog links will go here -->
                                     {{--$blogs--}}
+                                    <div class="card">
+                                        <div class="card-header">Posted by Dr.Steve</div>
                                     @foreach($blogs as $blog)
-                                        <li><a href="{{route('blogs.show', $blog->slug)}}" >{{$blog->title}}</a></li>
-                                         <div>
-                         {{--           <hr>{!! $blog->content !!} --}}
-                                        </div>
-                                    <p>Posted by Dr.Steve on {{ $blog->created_at->format('M d Y') }}</p>
+                                        <div class="card-header"><a href="{{route('blogs.show', $blog->slug)}}" >[ {{ $blog->created_at->format('M d Y') }} ] {{$blog->title}}</a>
 
+                                    </div>
                                     @endforeach
+                                    </div>
                                 </div>
                             </div>
                         </div>
