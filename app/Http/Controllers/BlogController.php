@@ -1,23 +1,89 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
-    // Display a list of blogs
-    public function index()
+    // Show blog creation form
+    public function create()
     {
-        $blogs = Blog::latest()->get(); // Fetch all blogs sorted by latest
-        return view('blogs.index', compact('blogs'));
+        // Check if the authenticated user has ID = 1
+        if (Auth::id() != 1) {
+            return redirect()->route('home')->with('error', 'Unauthorized access.');
+        }
+
+        return view('blogs.create');
     }
 
-    // Display a single blog post by slug
+    // Store the new blog post
+    public function store(Request $request)
+    {
+        // Validate input
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'slug' => 'required|string|max:255',
+            'content' => 'required|string',
+        ]);
+
+        // Create the blog post with the authenticated user as the author
+        Blog::create([
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'content' => $request->content,
+            'user_id' => Auth::id(),
+        ]);
+
+        return redirect()->route('blogs.index')->with('success', 'Blog created successfully.');
+    }
+
+    // List blogs (optional)
+    public function index()
+    {
+        $blogs = Blog::all();
+        return view('blogs.index', compact('blogs'));
+    }
     public function show($slug)
     {
-        $blog = Blog::where('slug', $slug)->firstOrFail(); // Find the blog by slug
+        // Retrieve the blog by slug
+        $blog = Blog::where('slug', $slug)->firstOrFail(); // Retrieve or throw 404 if not found
+
+        // Pass the blog to the view
         return view('blogs.show', compact('blog'));
     }
+    public function edit($slug)
+    {
+        // Find the blog by slug
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+
+        // Return the edit view with the blog data
+        return view('blogs.edit', compact('blog'));
+    }
+    public function update(Request $request, $slug)
+    {
+        // Validate the request
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'content' => 'required', // HTML content
+            'slug' => 'required|string|unique:blogs,slug,' . $slug . ',slug', // Slug must be unique except the current blog
+        ]);
+
+        // Find the blog by slug
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+
+        // Update the blog fields
+        $blog->title = $request->input('title');
+        $blog->category = $request->input('category');
+        $blog->content = $request->input('content'); // Assume content stores HTML
+        $blog->slug = $request->input('slug');
+
+        // Save the changes
+        $blog->save();
+
+        // Redirect to the blog show page
+        return redirect()->route('blogs.show', $blog->slug)->with('success', 'Blog updated successfully.');
+    }
+
 }

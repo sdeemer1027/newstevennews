@@ -85,6 +85,13 @@
                                 <div class="blog-list">
                                     <h3>Latest Blogs</h3>
                                     <!-- Blog links will go here -->
+                                    <div class="card">
+                                        @foreach($blogs as $blog)
+                                        <div class="card-header"><a href="{{route('blogs.show', $blog->slug)}}">{{$blog->title}}</a></div>
+
+                                        @endforeach
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
