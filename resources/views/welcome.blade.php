@@ -69,7 +69,7 @@
     </section><!-- End Hero -->
 
 
-    <main id="main">
+    <main id="main" class="bg-black">
 
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
@@ -329,7 +329,7 @@
 
                     <BR>
 
-{{-- 
+{{--
                     <h2>To My Lovely Wife</h2>
                     <pre>
 In you, I found my heart’s true home,
