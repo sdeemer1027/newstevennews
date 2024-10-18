@@ -760,7 +760,7 @@ Forever yours, my lovely wife.
         <section id="growingbusiness" class="about">
             <div class="container">
 
-                <div class="section-title">
+                <div class="section-title text-white">
                     <h2>Growing your Business</h2>
                     <p> <p class="animate__animated animate__fadeInUp">Empower Your Business with Strategic Growth Solutions. As a seasoned professional dedicated to catalyzing business success, I bring a wealth of experience and expertise to the table. My proven track record in developing and executing growth strategies has enabled numerous businesses to achieve remarkable expansion and profitability. With a keen eye for market trends, innovative problem-solving skills, and a results-driven approach, I specialize in identifying untapped opportunities, optimizing operational efficiency, and fostering strategic partnerships that fuel sustained growth. Let's collaborate to unlock your business's full potential and chart a course towards unparalleled success</p></p>
                 </div>
@@ -780,7 +780,7 @@ Forever yours, my lovely wife.
         <section id="yourvision" class="about">
             <div class="container">
 
-                <div class="section-title">
+                <div class="section-title text-white">
                     <h2>Empowering Your Vision</h2>
                     <p> Transforming Ideas into Exceptional Websites <p class="animate__animated animate__fadeInUp">
                         At Steven.News, we are dedicated to turning your vision into reality. With my expertise specializing in crafting stunning and functional websites that align perfectly with your goals and aspirations. Whether you're a small business looking to establish a strong online presence or a growing enterprise aiming to enhance user experience, I'm here to make your vision come to life. From sleek designs to robust functionalities, I'll work closely with you every step of the way to create a website that not only reflects your brand identity but also captivates your audience and drives success. Let me empower your vision and elevate your online presence today!
@@ -803,7 +803,7 @@ Forever yours, my lovely wife.
         <section id="unlockservice" class="about">
             <div class="container">
 
-                <div class="section-title">
+                <div class="section-title text-white">
                     <h2>Unlock Your Potential with Our Service</h2>
                     <p> <p class="animate__animated animate__fadeInUp">
                         At Steven.News, your success is my priority. My range of services is designed to empower you with the tools and solutions you need to thrive in today's digital landscape. From cutting-edge web design and development to strategic digital marketing and robust back-end solutions, we offer comprehensive services tailored to your unique needs. Whether you're launching a new venture, expanding your online presence, or optimizing existing processes, our expertise and dedication ensure that you achieve your goals effectively and efficiently. Let's unlock your full potential together and take your business to new heights.
