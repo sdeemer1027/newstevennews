@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FoodfactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -46,5 +47,13 @@ Route::put('/blogs/{slug}', [BlogController::class, 'update'])->name('blogs.upda
 Route::post('/blogs/{blog}/comments', [CommentController::class, 'store'])->middleware('auth')->name('comments.store');
 
 Route::get('/resume',[HomeController::class, 'resume'])->name('resume');
+
+
+Route::get('/foodfact',[FoodfactController::class, 'index'])->name('foodfact.index');
+// Route to show the barcode scanning view
+Route::get('/scan', [FoodfactController::class, 'showScanView'])->name('foodfact.scan');
+// Route to process the scanned barcode
+Route::post('/scan', [FoodfactController::class, 'processBarcode'])->name('processBarcode');
+
 
 require __DIR__.'/auth.php';
