@@ -12,4 +12,9 @@ class HomeController extends Controller
         $blogs = Blog::latest()->get(); // Fetch all blogs sorted by latest
         return view('welcome', compact('blogs'));
     }
+    public function resume()
+    {
+        $blogs = Blog::latest()->get(); // Fetch all blogs sorted by latest
+        return view('resume', compact('blogs'));
+    }
 }

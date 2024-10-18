@@ -18,9 +18,10 @@
                                 <div class="about-me">
                                     <h3>Categories</h3>
                                     <hr>
-                                    <p>Laravel</p>
-                                    <p>PHP</p>
-                                    <p>MySql</p>
+                                    @foreach($blogs as $blog)
+                                        <li> {{ $blog->category}}</li>
+
+                                    @endforeach
                                 </div>
                             </div>
                             <div class="col-md-9">
@@ -36,6 +37,8 @@
                                     </div>
                                     @endforeach
                                     </div>
+
+                                    {{--$blogs--}}
                                 </div>
                             </div>
                         </div>

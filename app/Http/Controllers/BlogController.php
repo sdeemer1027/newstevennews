@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,10 +32,17 @@ class BlogController extends Controller
         ]);
 
         // Create the blog post with the authenticated user as the author
-        Blog::create([
-            'title' => $request->title,
+ //       Blog::create([
+ //           'title' => $request->title,
+ //           'slug' => $request->slug,
+ //           'content' => $request->content,
+ //           'user_id' => Auth::id(),
+ //       ]);
+        $blog = Blog::create([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
             'slug' => $request->slug,
-            'content' => $request->content,
+            'category' => Category::find($request->input('categories')[0])->name ?? null,
             'user_id' => Auth::id(),
         ]);
         // Attach selected categories to the blog
@@ -46,7 +54,10 @@ class BlogController extends Controller
     // List blogs (optional)
     public function index()
     {
-        $blogs = Blog::all();
+   //     $blogs = Blog::all();
+        // Eager load categories to avoid N+1 problem
+        $blogs = Blog::with('categories')->get();
+
         return view('blogs.index', compact('blogs'));
     }
     public function show($slug)

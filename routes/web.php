@@ -45,4 +45,6 @@ Route::put('/blogs/{slug}', [BlogController::class, 'update'])->name('blogs.upda
 // Comment routes - make sure user is authenticated to post a comment
 Route::post('/blogs/{blog}/comments', [CommentController::class, 'store'])->middleware('auth')->name('comments.store');
 
+Route::get('/resume',[HomeController::class, 'resume'])->name('resume');
+
 require __DIR__.'/auth.php';

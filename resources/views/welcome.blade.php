@@ -22,6 +22,7 @@
                                 <div class="carousel-content">
                                     <h2 class="animate__animated animate__fadeInDown">Grow YourBusiness </h2>
                                     <p class="animate__animated animate__fadeInUp">Empower Your Business with Strategic Growth Solutions. As a seasoned professional dedicated to catalyzing business success, I bring a wealth of experience and expertise to the table. <!-- My proven track record in developing and executing growth strategies has enabled numerous businesses to achieve remarkable expansion and profitability. With a keen eye for market trends, innovative problem-solving skills, and a results-driven approach, I specialize in identifying untapped opportunities, optimizing operational efficiency, and fostering strategic partnerships that fuel sustained growth. Let's collaborate to unlock your business's full potential and chart a course towards unparalleled success--></p>
+                                    <br>
                                     <div>
                                         <a href="#growingbusiness" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                                     </div>
@@ -35,6 +36,7 @@
                                 <div class="carousel-content">
                                     <h2 class="animate__animated animate__fadeInDown">Empowering Your Vision</h2>
                                     <p class="animate__animated animate__fadeInUp">Transforming Ideas into Exceptional Websites</p>
+                                   <br>
                                     <div>
                                         <a href="#yourvision" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                                     </div>
@@ -77,8 +79,22 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="about-me">
-                                    <h3>About Me</h3>
-                                    <p>Brief description about yourself and your skills...</p>
+                                    <div class="card">
+                                        <div class="card-header"> <h3>About Me</h3> </div>
+                                    <div class="card-body">
+                                    <p>Innovative and seasoned Full Stack PHP Developer with 31 years of expertise, excelling in
+                                        integrating technologies to deliver high-quality applications. Adept at leading cross-functional
+                                        teams to meet critical deadlines and analyzing unique client challenges to create visually
+                                        appealing web solutions. Strong background in IT support, troubleshooting, and security,
+                                        ensuring first-rate customer satisfaction. Committed to continuous learning and staying at the
+                                        forefront of industry trends.</p><br>
+                                    <p>With proficiency in PHP, Laravel, React.js, MySQL, and more, I excel in web development,
+                                        frontend and backend technologies, database management, mobile & application development,
+                                        API integration, version control, server-side development, DevOps & CI/CD, cloud services,
+                                        security & performance optimization, and soft skills including problem-solving, communication,
+                                        team collaboration, project management, and leadership</p>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
