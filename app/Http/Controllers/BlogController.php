@@ -15,7 +15,8 @@ class BlogController extends Controller
             return redirect()->route('home')->with('error', 'Unauthorized access.');
         }
 
-        return view('blogs.create');
+        $categories = Category::all(); // Fetch all categories
+        return view('blogs.create', compact('categories'));
     }
 
     // Store the new blog post
@@ -26,6 +27,7 @@ class BlogController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
             'content' => 'required|string',
+            'categories' => 'required|array',
         ]);
 
         // Create the blog post with the authenticated user as the author
@@ -35,6 +37,8 @@ class BlogController extends Controller
             'content' => $request->content,
             'user_id' => Auth::id(),
         ]);
+        // Attach selected categories to the blog
+        $blog->categories()->attach($request->input('categories'));
 
         return redirect()->route('blogs.index')->with('success', 'Blog created successfully.');
     }

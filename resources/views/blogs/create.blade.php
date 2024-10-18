@@ -32,12 +32,11 @@
                     <input type="text" class="form-control" id="slug" name="slug" required>
                 </div>
                 <div class="form-group">
-                    <label for="category">Category:</label>
-                    <select name="category" id="category" class="form-control">
-                        <option value=""></option>
-                        <option value="Laravel">Laravel</option>
-                        <option value="PHP">PHP</option>
-                        <option value="MySql">MySql</option>
+                    <label for="categories" class="form-label">Categories</label>
+                    <select class="form-select" id="categories" name="categories[]" multiple required>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
                     </select>
 
                 </div>

@@ -17,7 +17,11 @@
                             <div class="col-md-2">
                                 <div class="about-me">
                                     <h3>Categories</h3>
-                                    <p>List Category</p>
+                                    <ul>
+                                        @foreach($blog->categories as $category)
+                                            <li>{{ $category->name }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-md-10">
