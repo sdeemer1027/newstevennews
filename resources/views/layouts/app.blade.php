@@ -64,6 +64,67 @@
         </div>
 
 
+        <footer class="bg-dark text-light pt-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Column 1: About Section -->
+                    <div class="col-md-4">
+                        <h5>About Us</h5>
+                        <p>
+                            Welcome to Steven News! Stay informed with the latest headlines, analysis, and reports from around the world.
+                        </p>
+                    </div>
+
+                    <!-- Column 2: Quick Links -->
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="/home" class="text-light">Home</a></li>
+                            <li><a href="/about" class="text-light">About</a></li>
+                            <li><a href="/contact" class="text-light">Contact</a></li>
+                            <li><a href="/privacy-policy" class="text-light">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Social Media -->
+                    <div class="col-md-4">
+                        <h5>Follow Us</h5>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="text-light">
+                                    <i class="fab fa-facebook fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="text-light">
+                                    <i class="fab fa-twitter fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="text-light">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="text-light">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <h5>QR Code</h5>
+                        <div>{!! $qrCode !!}</div>
+                        <p>Scan the QR code to visit Steven News</p>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col text-center">
+                        <p>&copy; 2024 Steven News. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
 
 
 
