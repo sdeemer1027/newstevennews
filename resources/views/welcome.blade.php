@@ -4,17 +4,12 @@
             <span style="color:#e97855;">S</span>teven.<span style="color:#e97855;">News</span>
         </h2>
     </x-slot>
-
-
     <!-- ======= Hero Section ======= -->
     <section id="hero">
         <div class="hero-container">
             <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
                 <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
                 <div class="carousel-inner" role="listbox">
-
                     <!-- Slide 1 -->
                     <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-4.jpg);">
                         <div class="carousel-container">
@@ -27,7 +22,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Slide 2 -->
                     <div class="carousel-item" style="background-image: url(assets/img/slide/background.jpg);">
                         <div class="carousel-container">
@@ -40,7 +34,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Slide 3 -->
                     <div class="carousel-item" style="background-image: url(assets/img/slide/slide-5.jpg);">
                         <div class="carousel-container">
@@ -53,24 +46,19 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
                 </a>
-
                 <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
                     <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
                 </a>
-
             </div>
         </div>
-    </section><!-- End Hero -->
-
+    </section>
+    <!-- End Hero -->
 
     <main id="main" class="bg-black">
-
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
@@ -153,55 +141,11 @@
                 </div>
 
             </div>
-        </section><!-- End About Section -->
+        </section>
+        <!-- End About Section -->
 
-        <!-- ======= Counts Section ======= -->
-    {{--
-  <section id="counts" class="counts">
-    <div class="container">
-
-      <div class="row no-gutters">
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <i class="bi bi-emoji-smile"></i>
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Happy Clients</strong> Good relationships always lead to happy clients</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
-            <span data-purecounter-start="0" data-purecounter-end="1521" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Projects</strong> Over 1500 projects </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <i class="bi bi-headset"></i>
-            <span data-purecounter-start="0" data-purecounter-end="30320" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Hours Of Support</strong> Over 30 years can add up the hours os support dedicated to all</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-          <div class="count-box">
-            <i class="bi bi-people"></i>
-            <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Hard Workers</strong> Every Person I work with dediction dictates Hard Work</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Counts Section -->
---}}
-    <!-- ======= My clients Section ======= -->
+        <!-- ======= My clients Section ======= -->
         <section id="clients" class="clients section-bg">
-
             <div class="container">
                 <div class="section-title">
                     <h2 >Few Clients/Projects</h2>
@@ -234,29 +178,16 @@
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                         <img src="assets/img/clients/ynot.png" class="img-fluid" alt="">
                     </div>
-                    {{--
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/clients/topdawg-yellow.e83d1363.svg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/img/clients/basf_we_create_chemistry_blue.png" class="img-fluid" alt="">
-                    </div>
-                    --}}
+
                 </div>
 
             </div>
-        </section><!-- End My Clients Section -->
+        </section>
+        <!-- End My Clients Section -->
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services">
             <div class="container">
-
                 <div class="section-title text-white">
                     <h2>Services</h2>
                     <p>Comprehensive Website Design and Domain Solutions: Elevate your online presence with our full-suite services encompassing website design, development, and domain management. From captivating designs that reflect your brand's identity to seamless functionality that enhances user experience, we cover every aspect of creating a successful online platform. Our expert team ensures that your website is not only visually appealing but also optimized for performance, security, and search engine visibility. With our domain expertise, we handle domain registration, configuration, and maintenance, providing you with a hassle-free experience. Partner with us to unlock the full potential of your digital presence and stand out in today's competitive online landscape.</p>
@@ -310,59 +241,22 @@
                       <h4 class="title"><a href="">AWS</a></h4>
                       <p class="description">AWS: Empowering Scalable Cloud Solutions. Amazon Web Services (AWS) provides a comprehensive suite of cloud services, offering scalability, reliability, and flexibility for businesses of all sizes. From storage and computing to machine learning and IoT, AWS enables organizations to innovate and scale their digital infrastructure with ease, driving efficiency and growth in today's dynamic business landscape</p>
                     </div>
-          --}}
-
-
+                    --}}
 
                 </div>
 
             </div>
-        </section><!-- End Services Section -->
+        </section>
+        <!-- End Services Section -->
 
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us">
             <div class="container">
-
                 <div class="section-title text-white">
                     <h2>Why Me</h2>
                     <p>I will handle everything from designing layouts and setting up databases to managing Git repositories and finding affordable hosting solutions. My goal is to provide you with cost-effective options that meet your budget and execute them according to a well-defined plan.</p>
 
                     <BR>
-
-{{--
-                    <h2>To My Lovely Wife</h2>
-                    <pre>
-In you, I found my heart’s true home,
-A love so deep, forever grown.
-Through every joy, through every tear,
-You've been my light, my constant cheer.
-
-Your smile, a sun that warms my soul,
-Together, we've made one heart whole.
-Each day with you, a precious gift,
-In your embrace, my spirits lift.
-
-We've danced through life, both hand in hand,
-Building dreams and making plans.
-No storm too fierce, no night too long,
-With you, my love, I feel so strong.
-
-On this day, we celebrate,
-A love that time cannot abate.
-Here's to forever, you and I,
-Under love’s unchanging sky.
-
-Happy anniversary, my dear,
-With you, there's nothing left to fear.
-My heart is yours, now and for life,
-Forever yours, my lovely wife.
-</pre>
-
-
---}}
-
-
-
                 </div>
 
                 <div class="row">
@@ -398,20 +292,20 @@ Forever yours, my lovely wife.
                 </div>
 
             </div>
-        </section><!-- End Why Us Section -->
+        </section>
+        <!-- End Why Us Section -->
 
         <!-- ======= Portfolio Section ======= -->
-    {{--
-  <section id="portfolio" class="portfolio">
-    <div class="container">
+        {{--
+        <section id="portfolio" class="portfolio">
+         <div class="container">
 
-      <div class="section-title">
-        <h2>My Portfolio</h2>
-        <p>My Portfolio is coming soon it will range from websites to digital graphics, drawings, paintings, chalk and more</p>
-      </div>
---}}
-
-    {{--
+          <div class="section-title">
+          <h2>My Portfolio</h2>
+          <p>My Portfolio is coming soon it will range from websites to digital graphics, drawings, paintings, chalk and more</p>
+          </div>
+         --}}
+        {{--
             <div class="row">
 
               <div class="col-lg-12 d-flex justify-content-center">
@@ -556,10 +450,11 @@ Forever yours, my lovely wife.
             --}}
 
 
-    {{--
-</div>
-</section><!-- End Portfolio Section -->
---}}
+           {{--
+            </div>
+            </section>
+            <!-- End Portfolio Section -->
+           --}}
     <!-- ======= Team Section ======= -->
         <section id="team" class="team">
             <div class="container">
