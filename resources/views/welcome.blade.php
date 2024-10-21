@@ -235,13 +235,13 @@
                         <h4 class="title"><a href="">Javascript</a></h4>
                         <p class="description">JavaScript: The Language of Web Interactivity. As the cornerstone of web development, JavaScript empowers dynamic and interactive web experiences. From user interface enhancements to complex functionalities, JavaScript fuels the modern web, making it a versatile and essential tool for developers worldwide.</p>
                     </div>
-                    {{--
+
                      <div class="col-lg-4 col-md-6 icon-box">
                       <div class="icon"><i class="fab fa-aws"></i></div>
                       <h4 class="title"><a href="">AWS</a></h4>
                       <p class="description">AWS: Empowering Scalable Cloud Solutions. Amazon Web Services (AWS) provides a comprehensive suite of cloud services, offering scalability, reliability, and flexibility for businesses of all sizes. From storage and computing to machine learning and IoT, AWS enables organizations to innovate and scale their digital infrastructure with ease, driving efficiency and growth in today's dynamic business landscape</p>
                     </div>
-                    --}}
+                 {{--   --}}
 
                 </div>
 
