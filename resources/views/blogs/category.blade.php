@@ -14,8 +14,9 @@
                     {{--@include('blogs.crumb.blade.php')--}}
                     <a href="{{route('home')}}">Home</a> -> <a href="{{route('blogs.index')}}">Blogs</a> ->
                     @foreach($blogs as $blog)
-                    {{$blog->category}}
+
                     @endforeach
+                    {{$blog->category}}
                     <span style="float:right;"><a href="{{route('blogs.create', $blog->category)}}" class="btn btn-primary">Add New</a></span>
                     <div class="container-fluid my-5">
                         <div class="row">
