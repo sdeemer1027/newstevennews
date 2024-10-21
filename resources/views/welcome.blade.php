@@ -1039,6 +1039,9 @@ Forever yours, my lovely wife.
               </div>
             </section><!-- End Contact Section -->
         --}}
+
+        {{$qrCode}}
+        
     </main><!-- End #main -->
 </x-app-layout>
 
