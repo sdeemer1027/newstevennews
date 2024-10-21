@@ -448,14 +448,13 @@
 
             </div>
             --}}
-
-
            {{--
             </div>
             </section>
             <!-- End Portfolio Section -->
            --}}
-    <!-- ======= Team Section ======= -->
+
+        <!-- ======= Team Section ======= -->
         <section id="team" class="team">
             <div class="container">
 
@@ -646,15 +645,11 @@
                 </div>
 
             </div>
-        </section><!-- End Team Section -->
-
-
-
-
+        </section>
+        <!-- End Team Section -->
 
         <section id="growingbusiness" class="about">
             <div class="container">
-
                 <div class="section-title text-white">
                     <h2>Growing your Business</h2>
                     <p> <p class="animate__animated animate__fadeInUp">Empower Your Business with Strategic Growth Solutions. As a seasoned professional dedicated to catalyzing business success, I bring a wealth of experience and expertise to the table. My proven track record in developing and executing growth strategies has enabled numerous businesses to achieve remarkable expansion and profitability. With a keen eye for market trends, innovative problem-solving skills, and a results-driven approach, I specialize in identifying untapped opportunities, optimizing operational efficiency, and fostering strategic partnerships that fuel sustained growth. Let's collaborate to unlock your business's full potential and chart a course towards unparalleled success</p></p>
@@ -717,226 +712,8 @@
             </div>
         </section>
 
-
-{{--
-        <section>
-            <div class="container">
-
-                <iframe src="http://dashboard.blk.cash/login"
-                        width="360"
-                        height="640"
-                        style="border: none;">
-                </iframe>
-            </div>
-
-        </section>
---}}
-
-
-
-        {{--
-
-            <!-- ======= Pricing Section ======= -->
-            <section id="pricing" class="pricing">
-              <div class="container">
-
-                <div class="section-title">
-                  <h2>Pricing</h2>
-                  <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-                </div>
-
-                <div class="row">
-
-                  <div class="col-lg-4 col-md-6">
-                    <div class="box">
-                      <h3>Free</h3>
-                      <h4><sup>$</sup>0<span> / month</span></h4>
-                      <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                      </ul>
-                      <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-                    <div class="box recommended">
-                      <h3>Business</h3>
-                      <h4><sup>$</sup>19<span> / month</span></h4>
-                      <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li>Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                      </ul>
-                      <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-                    <div class="box">
-                      <h3>Developer</h3>
-                      <h4><sup>$</sup>29<span> / month</span></h4>
-                      <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li>Pharetra massa</li>
-                        <li>Massa ultricies mi</li>
-                      </ul>
-                      <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </section><!-- End Pricing Section -->
-
-        --}}
-
-        {{--
-            <!-- ======= Frequently Asked Questions Section ======= -->
-            <section id="faq" class="faq section-bg">
-              <div class="container">
-
-                <div class="section-title">
-                  <h2>Frequently Asked Questions</h2>
-                  <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-                </div>
-
-                <div class="faq-list">
-                  <ul>
-                    <li data-aos="fade-up">
-                      <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                      <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                        <p>
-                          Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li data-aos="fade-up" data-aos-delay="100">
-                      <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                      <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                          Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li data-aos="fade-up" data-aos-delay="200">
-                      <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                      <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                          Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                        </p>
-                      </div>
-                    </li>
-
-                    <li data-aos="fade-up" data-aos-delay="300">
-                      <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                      <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                          Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
-                        </p>
-                      </div>
-                    </li>
-
-                    <li data-aos="fade-up" data-aos-delay="400">
-                      <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                      <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                        <p>
-                          Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                        </p>
-                      </div>
-                    </li>
-
-                  </ul>
-                </div>
-
-              </div>
-            </section><!-- End Frequently Asked Questions Section -->
-        --}}
-        {{--
-            <!-- ======= Contact Section ======= -->
-            <section id="contact" class="contact">
-              <div class="container">
-
-                <div class="section-title">
-                  <h2>Contact</h2>
-                  <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-                </div>
-
-                <div class="row contact-info">
-
-                  <div class="col-md-4">
-                    <div class="contact-address">
-                      <i class="bi bi-geo-alt"></i>
-                      <h3>Address</h3>
-                      <address>A108 Adam Street, NY 535022, USA</address>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="contact-phone">
-                      <i class="bi bi-phone"></i>
-                      <h3>Phone Number</h3>
-                      <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="contact-email">
-                      <i class="bi bi-envelope"></i>
-                      <h3>Email</h3>
-                      <p><a href="mailto:info@example.com">info@example.com</a></p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="form">
-                  <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                    <div class="row">
-                      <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                      </div>
-                      <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                      </div>
-                    </div>
-                    <div class="form-group mt-3">
-                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group mt-3">
-                      <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="my-3">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                  </form>
-                </div>
-
-              </div>
-            </section><!-- End Contact Section -->
-        --}}
-
-
-    </main><!-- End #main -->
+    </main>
+    <!-- End #main -->
 </x-app-layout>
 
 
