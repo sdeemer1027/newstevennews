@@ -99,10 +99,10 @@
                     <div class="col-md-4">
                         <h5>Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="/home" class="text-light">Home</a></li>
-                            <li><a href="/about" class="text-light">About</a></li>
-                            <li><a href="/contact" class="text-light">Contact</a></li>
-                            <li><a href="/privacy-policy" class="text-light">Privacy Policy</a></li>
+                            <li><a href="{{route('home')}}" class="text-light">Home</a></li>
+                            <li><a href="/index.php#about" class="text-light">About</a></li>
+                            <li><a href="#" class="text-light">Contact</a></li>
+                            <li><a href="#" class="text-light">Privacy Policy</a></li>
                         </ul>
                     </div>
 
@@ -111,23 +111,28 @@
                         <h5>Follow Us</h5>
                         <ul class="list-inline">
                             <li class="list-inline-item">
-                                <a href="#" class="text-light">
+                                <a href="https://www.facebook.com/Stevendeemer2017/" class="text-light">
                                     <i class="fab fa-facebook fa-2x"></i>
                                 </a>
                             </li>
-                            <li class="list-inline-item">
+                    {{--        <li class="list-inline-item">
                                 <a href="#" class="text-light">
                                     <i class="fab fa-twitter fa-2x"></i>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="list-inline-item">
-                                <a href="#" class="text-light">
+                                <a href="https://www.instagram.com/sd1964.with/" class="text-light">
                                     <i class="fab fa-instagram fa-2x"></i>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#" class="text-light">
+                                <a href="https://www.linkedin.com/in/steven-deemer/" class="text-light">
                                     <i class="fab fa-linkedin fa-2x"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/sdeemer1027" class="text-light">
+                                    <i class="fab fa-github fa-2x"></i>
                                 </a>
                             </li>
                         </ul>

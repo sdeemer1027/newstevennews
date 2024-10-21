@@ -598,7 +598,7 @@ Forever yours, my lovely wife.
                                     <span>Project Manager</span>
                                     <div class="social">
 
-                                        <a href="https://www.facebook.com/drsteve2020/"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.facebook.com/drsteve2020/" target="_new"><i class="bi bi-facebook"></i></a>
 
                                     </div>
                                 </div>
@@ -614,7 +614,7 @@ Forever yours, my lovely wife.
                                     <h4>Steven</h4>
                                     <span>Sr.Full Stack Developer</span>
                                     <div class="social">
-                                        <a href="https://www.facebook.com/Byte.Me.Page/"><i class="bi bi-facebook"></i></a>
+                                        <a href="https://www.facebook.com/Byte.Me.Page/" target="_new"><i class="bi bi-facebook"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -629,10 +629,10 @@ Forever yours, my lovely wife.
                                     <h4>Steven Deemer</h4>
                                     <span>Graphic Designer</span>
                                     <div class="social">
-                                        <a href=""><i class="bi bi-twitter"></i></a>
-                                        <a href=""><i class="bi bi-facebook"></i></a>
-                                        <a href=""><i class="bi bi-instagram"></i></a>
-                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                        {{--<a href=""><i class="bi bi-twitter"></i></a>--}}
+                                        <a href="#" target="_new"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" target="_new"><i class="bi bi-instagram"></i></a>
+                                        <a href="#" target="_new"><i class="bi bi-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
