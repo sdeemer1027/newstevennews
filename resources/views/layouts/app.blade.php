@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Steven,News') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -40,6 +40,26 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <style>
+            footer h5 {
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            footer p, footer ul {
+                font-size: 14px;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            .list-inline-item a {
+                margin-right: 10px;
+                color: #fff;
+            }
+
+        </style>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -111,6 +131,7 @@
                                 </a>
                             </li>
                         </ul>
+                        <BR>
                         <h5>QR Code</h5>
                         <div>{!! $qrCode !!}</div>
                         <p>Scan the QR code to visit Steven News</p>
