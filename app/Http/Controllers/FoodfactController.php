@@ -23,7 +23,7 @@ class FoodfactController extends Controller
         // Check if the response is an array and if the 'product' key exists
         if (is_array($response)) {
             $product =  $response; // Extract the product data
-            
+
 $product = collect($response); // Convert the product data to a collection
 
  //$productString = json_encode($product); // Convert the array to a JSON string
@@ -44,7 +44,7 @@ $product = collect($response); // Convert the product data to a collection
 //        }
 
 
-        
+
     } catch (\Exception $e) {
         // Handle error
         $product = null;
@@ -66,7 +66,7 @@ $product = collect($response); // Convert the product data to a collection
     // Process the scanned barcode
     public function processBarcode(Request $request)
     {
-        
+
 //dd($request);
 
         // Validate the barcode input
@@ -100,6 +100,11 @@ $product = collect($response); // Convert the product data to a collection
         } else {
             return redirect()->route('scan.view')->withErrors(['barcode' => 'Product not found!']);
         }
+
+
+
+
+
     }
 
 
@@ -107,7 +112,11 @@ $product = collect($response); // Convert the product data to a collection
 
 
 
-
+    // Show the barcode scanning view
+    public function menu()
+    {
+        return view('food.index'); // Ensure this matches your Blade view file name
+    }
 
 
 

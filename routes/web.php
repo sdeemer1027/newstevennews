@@ -5,6 +5,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FoodfactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,6 +55,8 @@ Route::get('/foodfact',[FoodfactController::class, 'index'])->name('foodfact.ind
 Route::get('/scan', [FoodfactController::class, 'showScanView'])->name('foodfact.scan');
 // Route to process the scanned barcode
 Route::post('/scan', [FoodfactController::class, 'processBarcode'])->name('processBarcode');
+Route::get('/food',[FoodfactController::class, 'menu'])->name('food.index');
 
+Route::resource('recipes', RecipeController::class)->except(['create', 'edit']);
 
 require __DIR__.'/auth.php';
