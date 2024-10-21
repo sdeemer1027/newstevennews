@@ -19,8 +19,10 @@
                     </ul>
                 </div>
             @endif
+            @foreach($categories as $category)
 
-            <form action="{{ route('blogs.store') }}" method="POST">
+            @endforeach
+            <form action="{{ route('blogs.store', 'hold') }}" method="POST">
                 @csrf
 
                 <div class="form-group">
@@ -33,7 +35,8 @@
                 </div>
                 <div class="form-group">
                     <label for="categories" class="form-label">Categories</label>
-                    <select class="form-select" id="categories" name="categories[]" multiple required>
+                    <select class="form-select" id="categories" name="categories[]"  required>
+                        <option value="">Select a Category</option>
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
@@ -50,4 +53,17 @@
         </div>
 
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#title').on('input', function() {
+                var title = $(this).val();
+                var slug = title.toLowerCase()
+                    .replace(/[^a-z0-9\s]/g, '') // Remove special characters
+                    .replace(/\s+/g, '_');       // Replace spaces with underscores
+
+                $('#slug').val(slug);
+            });
+        });
+
+    </script>
 </x-app-layout>

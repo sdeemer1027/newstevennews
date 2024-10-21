@@ -40,6 +40,12 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
         <style>
             footer h5 {
                 margin-bottom: 20px;
@@ -58,11 +64,54 @@
                 margin-right: 10px;
                 color: #fff;
             }
-
+            .toast {
+                transition: all 0.4s ease-in-out;
+            }
+            #toast {
+                border-radius: 25px;
+         /*       background: linear-gradient(135deg, #ff7e5f, #feb47b); / * A warm gradient */
+                background-color: rgba(0, 123, 255, 0.85); /* Semi-transparent blue background */
+                color: white;
+            }
+            .toast-header {
+                background-color: rgba(0, 0, 0, 0.2); /* Transparent header */
+                color: white;
+                animation: slideIn 0.6s ease-out;
+            }
+            .toast-body {
+                background-color: rgba(0, 0, 0, 0.1); /* Slightly different for contrast */
+            }
+            @keyframes slideIn {
+                from {
+                    transform: translateY(-20px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
         </style>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <!-- Toast notification container -->
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+
+                <strong class="me-auto">Notification</strong>
+                <small class="text-muted">Just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                {{-- session('toast_message') --}}
+                {!! session('toast_message') !!}
+            </div>
+        </div>
+    </div>
+
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         @auth
             @include('layouts.navigation') <!-- Show navigation for authenticated users -->
         @else

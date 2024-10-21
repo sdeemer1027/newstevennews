@@ -34,10 +34,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 // Blog routes
+/*
 Route::middleware('auth')->group(function () {
     Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
     Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
     Route::get('/blogs/{slug}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+
 });
 
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
@@ -46,6 +48,28 @@ Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show')
 Route::put('/blogs/{slug}', [BlogController::class, 'update'])->name('blogs.update');
 // Comment routes - make sure user is authenticated to post a comment
 Route::post('/blogs/{blog}/comments', [CommentController::class, 'store'])->middleware('auth')->name('comments.store');
+*/
+
+// Blog routes
+Route::middleware('auth')->group(function () {
+    Route::get('/blogs/{category}/create', [BlogController::class, 'create'])->name('blogs.create');
+    Route::post('/blogs/{category}', [BlogController::class, 'store'])->name('blogs.store');
+    Route::get('/blogs/{category}/{slug}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+});
+
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index'); // Show blogs in a category
+
+Route::get('/blogs/{category}/{slug}', [BlogController::class, 'show'])->name('blogs.show'); // Show individual blog with category
+Route::put('/blogs/{category}/{slug}', [BlogController::class, 'update'])->name('blogs.update');
+// Comment routes - make sure user is authenticated to post a comment
+Route::post('/blogs/{category}/comments', [CommentController::class, 'store'])->middleware('auth')->name('comments.store');
+// Route to display all blogs within a specific category
+Route::get('/blogs/{category}', [BlogController::class, 'showByCategory'])->name('blogs.byCategory');
+
+
+
+
+
 
 Route::get('/resume',[HomeController::class, 'resume'])->name('resume');
 

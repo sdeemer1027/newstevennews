@@ -4,19 +4,26 @@
             Blogs
         </h2>
     </x-slot>
-
     <div class="py-3">
+
+
 
         <div class="w-full mx-auto px-4">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-white dark:text-white">
-                    <a href="{{route('home')}}">Home</a> -> Blogs
+                    {{--@include('blogs.crumb.blade.php')--}}
+                    <a href="{{route('home')}}">Home</a> -> <a href="{{route('blogs.index')}}">Blogs</a> ->
+                    @foreach($blogs as $blog)
+                    {{$blog->category}}
+                    @endforeach
+                    <span style="float:right;"><a href="{{route('blogs.create', $blog->category)}}" class="btn btn-primary">Add New</a></span>
                     <div class="container-fluid my-5">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="about-me">
                                     <h3>Categories</h3>
                                     @include('blogs.categorylist')
+
                                 </div>
                             </div>
                             <div class="col-md-9">
@@ -26,11 +33,11 @@
                                     {{--$blogs--}}
                                     <div class="card">
                                         <div class="card-header">Posted by Dr.Steve</div>
-                                    @foreach($blogs as $blog)
-                                        <div class="card-header"><a href="{{route('blogs.show',  [$blog->category, $blog->slug])}}" >[ {{ $blog->created_at->format('M d Y') }} ] {{$blog->title}}</a>
+                                        @foreach($blogs as $blog)
+                                            <div class="card-header"><a href="{{route('blogs.show',  [$blog->category, $blog->slug])}}" >[ {{ $blog->created_at->format('M d Y') }} ] {{$blog->title}}</a>
 
-                                    </div>
-                                    @endforeach
+                                            </div>
+                                        @endforeach
                                     </div>
 
                                     {{--$blogs--}}
@@ -44,6 +51,19 @@
 
 
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toastEl = document.getElementById('toast');
+            if (toastEl && "{{ session('toast_message') }}") {
+                var toast = new bootstrap.Toast(toastEl, {
+                    delay: 4000 // Set delay to 2000 milliseconds (2 seconds)
+                });
+                toast.show();
+            }
+        });
+    </script>
 </x-app-layout>
 
 

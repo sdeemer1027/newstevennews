@@ -13,7 +13,9 @@ class BlogController extends Controller
     {
         // Check if the authenticated user has ID = 1
         if (Auth::id() != 1) {
-            return redirect()->route('home')->with('error', 'Unauthorized access.');
+        //    return redirect()->route('home')->with('error', 'Unauthorized access.');
+            return redirect()->back()->with('toast_message', 'Unauthorized access. <br> Adding of Blogs are currently set for admin only');
+
         }
 
         $categories = Category::all(); // Fetch all categories
@@ -54,20 +56,30 @@ class BlogController extends Controller
     // List blogs (optional)
     public function index()
     {
-   //     $blogs = Blog::all();
         // Eager load categories to avoid N+1 problem
         $blogs = Blog::with('categories')->get();
+        $categories = Category::all();
 
-        return view('blogs.index', compact('blogs'));
+        return view('blogs.index', compact('blogs','categories'));
     }
-    public function show($slug)
+    public function showByCategory($category)
     {
-        // Retrieve the blog by slug
-        $blog = Blog::where('slug', $slug)->firstOrFail(); // Retrieve or throw 404 if not found
-
-        // Pass the blog to the view
-        return view('blogs.show', compact('blog'));
+        $category = Category::where('name', $category)->firstOrFail(); // Assuming your Category model has a slug field
+        $blogs = Blog::where('category', $category->name)->paginate(10); // Assuming your Blog model has category_id
+        $categories = Category::all();
+        return view('blogs.category', compact('category', 'blogs','categories'));
     }
+
+    public function show($category, $slug)
+    {
+        $category = Category::where('name', $category)->firstOrFail(); // Get category by slug
+        $blog = Blog::where('slug', $slug)
+            ->where('category', $category->name)
+            ->firstOrFail(); // Get blog by slug and category
+
+        return view('blogs.show', compact('blog', 'category'));
+    }
+
     public function edit($slug)
     {
         // Find the blog by slug
