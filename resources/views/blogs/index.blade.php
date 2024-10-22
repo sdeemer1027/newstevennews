@@ -25,7 +25,7 @@
                                     <h3>Latest Blogs</h3>
                                     <!-- Blog links will go here -->
                                     {{--$blogs--}}
-                                    <div class="card">
+                                    <div class="card bg-black text-white">
                                         <div class="card-header">Posted by Dr.Steve</div>
                                     @foreach($blogs as $blog)
                                         <div class="card-header"><a href="{{route('blogs.show',  [$blog->category, $blog->slug])}}" >[ {{ $blog->created_at->format('M d Y') }} ] {{$blog->title}}</a>
