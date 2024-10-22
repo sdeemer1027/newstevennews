@@ -5,12 +5,12 @@
         </h2>
     </x-slot>
 
-    <div class="py-0">
+    <div class="py-3">
 
 
 
-        <div class="w-full mx-auto px-4">
-            <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="w-full mx-auto px-3">
+            <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
                 <div class="p-6 text-white dark:text-white">
                     <div class="container-fluid my-5">
                         <div class="row">
@@ -26,9 +26,9 @@
                             </div>
                             <div class="col-md-10">
                                 <div class="blog-list">
-                                    <div class="card bg-gray-400">
+                                    <div class="card bg-gray-400 ">
                                         <div class="card-header">{{$blog->title}}</div>
-                                        <div class="card-body">
+                                        <div class="card-body bg-black text-white">
                                             {!! $blog->content !!}
                                         </div>
                                     </div>
