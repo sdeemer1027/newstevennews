@@ -128,13 +128,13 @@
                     </div>
                 </header>
             @endif
-
+            <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
             <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
         </div>
-
+    </div>
 
         <footer class="bg-dark text-light pt-4">
             <div class="container">

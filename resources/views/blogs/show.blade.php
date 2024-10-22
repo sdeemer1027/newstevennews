@@ -15,8 +15,8 @@
                 <div class="p-6 text-white dark:text-white">
                     <div class="container-fluid my-5">
                         <div class="row">
-                            <div class="col-md-2">
-                                <div class="about-me">
+                            <div class="col-md-2 text-white">
+                                <div class="about-me  text-white">
                                     <h3>Categories</h3>
                                     <ul>
                                         @foreach($blog->categories as $category)
