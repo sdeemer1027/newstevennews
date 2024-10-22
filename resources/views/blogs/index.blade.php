@@ -18,8 +18,8 @@
                                 <div class="about-me">
                                     <h3>Categories</h3>
                                     @include('blogs.categorylist')
-                               <hr>
-                                    
+
+
                                 </div>
                             </div>
                             <div class="col-md-9">

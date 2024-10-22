@@ -9,7 +9,7 @@
 
 
         <div class="w-full mx-auto px-4">
-            <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg  bg-black">
                 <div class="p-6 text-white dark:text-white">
                     {{--@include('blogs.crumb.blade.php')--}}
                     <a href="{{route('home')}}">Home</a> -> <a href="{{route('blogs.index')}}">Blogs</a> ->
@@ -32,7 +32,7 @@
                                     <h3>Latest Blogs</h3>
                                     <!-- Blog links will go here -->
                                     {{--$blogs--}}
-                                    <div class="card">
+                                    <div class="card  bg-black text-white">
                                         <div class="card-header">Posted by Dr.Steve</div>
                                         @foreach($blogs as $blog)
                                             <div class="card-header"><a href="{{route('blogs.show',  [$blog->category, $blog->slug])}}" >[ {{ $blog->created_at->format('M d Y') }} ] {{$blog->title}}</a>
