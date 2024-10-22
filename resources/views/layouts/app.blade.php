@@ -46,6 +46,12 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Include jQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Include Toastr -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
         <style>
 
@@ -220,6 +226,22 @@
         <script src="/assets/js/main.js"></script>
 
 
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "timeOut": "5000"
+        };
+
+        @if(Session::has('success'))
+        toastr.success("{{ Session::get('success') }}");
+        @endif
+
+        @if(Session::has('error'))
+        toastr.error("{{ Session::get('error') }}");
+        @endif
+    </script>
 
     </body>
 </html>

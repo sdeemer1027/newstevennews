@@ -14,4 +14,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toastEl = document.getElementById('toast');
+            if (toastEl && "{{ session('toast_message') }}") {
+                var toast = new bootstrap.Toast(toastEl, {
+                    delay: 4000 // Set delay to 2000 milliseconds (2 seconds)
+                });
+                toast.show();
+            }
+        });
+    </script>
 </x-app-layout>
