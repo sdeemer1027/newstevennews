@@ -8,7 +8,7 @@
 
     <div class="py-3">
 
-        <div class="w-full mx-auto px-4 ">
+        <div class="w-full mx-auto px-3 ">
             <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black">
                 <div class="p-6 text-white dark:text-white">
                     <a href="{{route('home')}}">Home</a> -> Blogs
