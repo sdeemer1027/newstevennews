@@ -1,5 +1,6 @@
 <x-app-layout>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ">
             Blogs
@@ -65,6 +66,7 @@
             }
         </script>
 
+    </div>
     </div>
 </x-app-layout>
 
