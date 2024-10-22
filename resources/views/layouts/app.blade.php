@@ -96,7 +96,7 @@
 
         </style>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased dark_mode">
     <!-- Toast notification container -->
     <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
 

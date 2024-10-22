@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,11 @@ Route::get('/blogs/{category}', [BlogController::class, 'showByCategory'])->name
 
 
 
+
+Route::post('/toggle-dark-mode', function (\Illuminate\Http\Request $request) {
+    Session::put('dark_mode', $request->dark_mode);
+    return response()->json(['status' => 'success']);
+});
 
 
 

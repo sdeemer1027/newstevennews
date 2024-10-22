@@ -13,6 +13,20 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444; !important;
 }
+/* Light mode (default) */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* You can add more styles for dark mode */
+
 
 a {
   color: #5c9f24;
