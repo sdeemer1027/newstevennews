@@ -23,6 +23,9 @@
                     <x-nav-link :href="route('blogs.index')" :active="request()->routeIs('blogs.index')">
                         {{ __('Blogs') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('ham.index')" :active="request()->routeIs('ham.index')">
+                        {{ __('Video') }}
+                    </x-nav-link>
 
                 </div>
             </div>
@@ -96,6 +99,9 @@
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('dashboard')">
                     {{ __('Dashboard') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('ham.index')">
+                    {{ __('Videos') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('blogs.index')">
                     {{ __('Blogs') }}
