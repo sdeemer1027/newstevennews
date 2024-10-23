@@ -16,7 +16,7 @@ class MovieController extends Controller
         $qrCode = QrCode::size(300)->generate($fullUrl);
 
  //       dd($fullUrl);
-        
+
         return view('ham.index', compact('qrCode'));
     }
 }

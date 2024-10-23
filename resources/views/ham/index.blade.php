@@ -66,7 +66,7 @@
                 <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg  bg-black">
                     <div class="p-6 text-white dark:text-white">
                         {{--@include('blogs.crumb.blade.php')--}}
-                        <a href="{{route('home')}}">Home</a> -> <a href="{{route('blogs.index')}}">Blogs</a> ->
+                        <a href="{{route('home')}}">Home</a> -> <a href="{{route('ham.index')}}">Movies</a> ->
 
                         <div class="container-fluid my-5">
                             <div class="row">
@@ -83,12 +83,12 @@
                                     </div>
                                     <div class="bg-gray-800  p-3">{{$qrCode}}</div>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-9 bg-gray-800 p-1 px-1">
 
 
                                         <div class="video-wrapper">
                                             <!-- Iframe to display the movie -->
-                                            <iframe id="moviePlayer" src="" allowfullscreen></iframe>
+                                            <iframe id="moviePlayer" src="{{route('ham.intro')}}" allowfullscreen></iframe>
                                         </div>
 
                                         {{--$blogs--}}

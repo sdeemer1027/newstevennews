@@ -90,4 +90,7 @@ Route::get('/food',[FoodfactController::class, 'menu'])->name('food.index');
 
 Route::resource('recipes', RecipeController::class)->except(['create', 'edit']);
 Route::get('/hatfield/and/mccoy/',[MovieController::class, 'index'])->name('ham.index');
+Route::get('/hatfield/and/mccoy/intro',function () {
+    return view('ham.intro');
+})->name('ham.intro');
 require __DIR__.'/auth.php';
