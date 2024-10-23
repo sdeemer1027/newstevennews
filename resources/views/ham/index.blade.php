@@ -41,12 +41,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Ensure the video section takes full height */
+            height: 70vh; /* Ensure the video section takes full height */
         }
 
         iframe {
             width: 100%;
-            height: 80vh; /* Take 90% of the viewport height */
+            height: 60vh; /* Take 90% of the viewport height */
             border: none;
         }
     </style>
@@ -79,8 +79,9 @@
                                             <li data-video="1J0AvSBQWvROBD_unwEP-4fRN97WHkHp2">Hatfield & McCoy Part 2</li>
                                             <li data-video="1oWsw8a9azcIybsjTvVAHlG5Zyd4WRpuo">Hatfield & McCoy Part 3</li>
                                         </ul>
-                                        
+
                                     </div>
+                                    <div class="bg-gray-800  p-3">{{$qrCode}}</div>
                                 </div>
                                 <div class="col-md-9">
 
@@ -94,6 +95,9 @@
                                     </div>
                                 </div>
                             </div>
+                        <div class="row">
+
+                        </div>
                         </div>
                     </div>
                 </div>

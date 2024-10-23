@@ -89,5 +89,5 @@ Route::post('/scan', [FoodfactController::class, 'processBarcode'])->name('proce
 Route::get('/food',[FoodfactController::class, 'menu'])->name('food.index');
 
 Route::resource('recipes', RecipeController::class)->except(['create', 'edit']);
-Route::get('/Hatfield/and/mccoy/',[MovieController::class, 'index'])->name('ham.index');
+Route::get('/hatfield/and/mccoy/',[MovieController::class, 'index'])->name('ham.index');
 require __DIR__.'/auth.php';
