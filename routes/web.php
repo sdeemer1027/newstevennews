@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FoodfactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
@@ -88,5 +89,5 @@ Route::post('/scan', [FoodfactController::class, 'processBarcode'])->name('proce
 Route::get('/food',[FoodfactController::class, 'menu'])->name('food.index');
 
 Route::resource('recipes', RecipeController::class)->except(['create', 'edit']);
-
+Route::get('/Hatfield/and/mccoy/',[MovieController::class, 'index'])->name('ham.index');
 require __DIR__.'/auth.php';
