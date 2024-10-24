@@ -40,7 +40,7 @@
                                               {!! $recipes->directions !!}<HR>
                                     </div>
 
-{{$recipes}}
+{{--$recipes--}}
 
                                 @else
 {{$foodname->name}}<BR>

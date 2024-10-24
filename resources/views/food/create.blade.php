@@ -24,19 +24,17 @@
                                         @csrf
                                         @method('POST')
 
-
                                         <!-- File input to upload new picture -->
                                             <div>
                                                 <label for="picture">Upload a new picture:</label>
                                                 <input type="file" name="picture" id="picture">
                                             </div>
-
                                             <div class="mb-3">
                                                 <label for="slug" class="form-label">Name</label>
                                                 @if($fid)
                                                     {{$fid}}
                                                     <input type="text" class="form-control" id="name" name="name" value="{{ $fid->name }}" required>
-<input type="text" name="food_id" class="form-control" Value="{{$fid->id}}">
+                                                    <input type="text" name="food_id" class="form-control" Value="{{$fid->id}}">
                                                 @else
                                                     <input type="text" class="form-control" id="name" name="name" value="" required>
                                                 @endif
