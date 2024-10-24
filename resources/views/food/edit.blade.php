@@ -44,7 +44,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="category">Category:</label>
-                                                <select name="category" id="category" class="form-control">
+                                                <select name="category" id="category" class="form-control bg-white text-black">
                                                     <option value=""></option>
                                                     @foreach($foodcategory as $fcategory)
                                                         <option value="{{$fcategory->id}}"

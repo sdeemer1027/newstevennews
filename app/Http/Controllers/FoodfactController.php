@@ -183,7 +183,7 @@ $foodname = Food::where('id',$menu)->first();
 
             // If the food already has a picture, delete the old file
             if ($meal->picture_url) {
-                Storage::disk('public')->delete($food->picture_url);
+                Storage::disk('public')->delete($meal->picture_url);
             }
 
             // Save the new file path in the database
