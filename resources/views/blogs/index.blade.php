@@ -46,25 +46,6 @@
             </div>
         </div>
 
-        <script>
-            function toggleDarkMode() {
-                const body = document.body;
-                body.classList.toggle('dark-mode');
-
-                // Save the preference using AJAX
-                const isDarkMode = body.classList.contains('dark-mode');
-                fetch('/toggle-dark-mode', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                    },
-                    body: JSON.stringify({
-                        dark_mode: isDarkMode
-                    })
-                });
-            }
-        </script>
 
     </div>
     </div>

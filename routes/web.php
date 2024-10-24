@@ -87,8 +87,18 @@ Route::get('/scan', [FoodfactController::class, 'showScanView'])->name('foodfact
 // Route to process the scanned barcode
 Route::post('/scan', [FoodfactController::class, 'processBarcode'])->name('processBarcode');
 Route::get('/food',[FoodfactController::class, 'menu'])->name('food.index');
+Route::get('/food/cat/{cat}',[FoodfactController::class, 'bycategory'])->name('food.bycategory');
+
+Route::get('/food/recipe/{menu}',[FoodfactController::class, 'showfood'])->name('food.menu');
+Route::get('/menu/recipe/create/{foodname?}', [FoodfactController::class, 'create'])->name('food.menu.create');
+Route::post('/menu/recipe/create/{foodname?}', [BlogController::class, 'store'])->name('food.menu.store');
+Route::get('/food/recipe/{menu}/edit',[FoodfactController::class, 'editfood'])->name('food.menu.edit');
+Route::put('/food/recipe/{menu}', [FoodfactController::class, 'update'])->name('food.menu.update');
+
 
 Route::resource('recipes', RecipeController::class)->except(['create', 'edit']);
+
+
 Route::get('/hatfield/and/mccoy/',[MovieController::class, 'index'])->name('ham.index');
 Route::get('/hatfield/and/mccoy/intro',function () {
     return view('ham.intro');
