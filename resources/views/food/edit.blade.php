@@ -1,5 +1,5 @@
 <x-app-layout>
-
+{{--
     <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
@@ -11,7 +11,7 @@
             height: 400  // Adjust height as per your need
         });
     </script>
-
+--}}
     <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ">
