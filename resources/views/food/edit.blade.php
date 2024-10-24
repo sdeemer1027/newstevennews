@@ -2,21 +2,13 @@
 {{--
     <!-- TinyMCE -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
-    <script>
-        tinymce.init({
-            selector: 'textarea.tinymce-editor',  // Select your textarea to apply TinyMCE
-            plugins: 'code',  // Enable plugins like code editing
-            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
-            height: 400  // Adjust height as per your need
-        });
-    </script>
+    <!-- Replace 'YOUR_API_KEY' with your actual API key -->
+    <script src="https://cdn.tiny.cloud/1/c2uhrjt58pgvvb4gu84jjjm98gyjv4lpcgexqcv2ryeroqpg/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    --}}
 
 
 
 
-
---}}
     <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ">
@@ -85,6 +77,9 @@
                                             <div class="mb-3">
                                                 <label for="directions" class="form-label">directions</label>
                                                 <textarea class="form-control  bg-white text-black  tinymce-editor" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
+
+                                                <textarea class="tinymce-editor"></textarea>
+
                                             </div>
                                             <!-- Submit Button -->
                                             <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -118,6 +113,16 @@
 
 
     </script>
+{{--
+    <script>
+        tinymce.init({
+            selector: 'textarea.tinymce-editor',  // Select your textarea to apply TinyMCE
+            plugins: 'code',  // Enable plugins like code editing
+            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
+            height: 400  // Adjust height as per your need
+        });
+    </script>
+--}}
 
 
 </x-app-layout>

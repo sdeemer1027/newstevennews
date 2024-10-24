@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     editorElements.forEach((editorElement) => {
         if (editorElement) {
             import('tinymce/tinymce').then(tinymce => {
+                console.log('TinyMCE loaded'); // Add this line
                 tinymce.init({
                     selector: editorElement,
                     plugins: 'code',
