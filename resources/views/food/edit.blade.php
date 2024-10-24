@@ -61,13 +61,13 @@
                                             </div>
                                             <!-- ingredients -->
                                             <div class="mb-3">
-                                                <label for="ingredients" class="form-label bg-white text-black">ingredients</label>
-                                                <textarea class="form-control" id="ingredients" name="ingredients" rows="6" required>{{ old('content', $menu->ingredients) }}</textarea>
+                                                <label for="ingredients" class="form-label">ingredients</label>
+                                                <textarea class="form-control  bg-white text-black" id="ingredients" name="ingredients" rows="6" required>{{ old('content', $menu->ingredients) }}</textarea>
                                             </div>
                                             <!-- directions -->
                                             <div class="mb-3">
-                                                <label for="directions" class="form-label bg-white text-black">directions</label>
-                                                <textarea class="form-control" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
+                                                <label for="directions" class="form-label">directions</label>
+                                                <textarea class="form-control  bg-white text-black" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
                                             </div>
                                             <!-- Submit Button -->
                                             <button type="submit" class="btn btn-primary">Save Changes</button>
