@@ -40,7 +40,7 @@
                                             <!-- Slug -->
                                             <div class="mb-3">
                                                 <label for="slug" class="form-label">Name</label>
-                                                <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $menu->food->name) }}" required>
+                                                <input type="text" class="form-control bg-white text-black" id="name" name="name" value="{{ old('name', $menu->food->name) }}" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="category">Category:</label>
@@ -57,16 +57,16 @@
                                             <!-- Content -->
                                             <div class="mb-3">
                                                 <label for="content" class="form-label">Content</label>
-                                                <textarea class="form-control" id="content" name="text" rows="6" required>{{ old('content', $menu->text) }}</textarea>
+                                                <textarea class="form-control bg-white text-black" id="content" name="text" rows="6" required>{{ old('content', $menu->text) }}</textarea>
                                             </div>
                                             <!-- ingredients -->
                                             <div class="mb-3">
-                                                <label for="ingredients" class="form-label">ingredients</label>
+                                                <label for="ingredients" class="form-label bg-white text-black">ingredients</label>
                                                 <textarea class="form-control" id="ingredients" name="ingredients" rows="6" required>{{ old('content', $menu->ingredients) }}</textarea>
                                             </div>
                                             <!-- directions -->
                                             <div class="mb-3">
-                                                <label for="directions" class="form-label">directions</label>
+                                                <label for="directions" class="form-label bg-white text-black">directions</label>
                                                 <textarea class="form-control" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
                                             </div>
                                             <!-- Submit Button -->
