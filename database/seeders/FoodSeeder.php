@@ -169,10 +169,7 @@ class FoodSeeder extends Seeder
 
         ]);
 
-        foreach (array_chunk($foods, 100) as $batch) {
-            DB::table('foods')->insert($batch);
-        }
-
+       
 
 
     }
