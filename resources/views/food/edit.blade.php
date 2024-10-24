@@ -1,5 +1,17 @@
 <x-app-layout>
 
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea.tinymce-editor',  // Select your textarea to apply TinyMCE
+            plugins: 'code',  // Enable plugins like code editing
+            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
+            height: 400  // Adjust height as per your need
+        });
+    </script>
+
     <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ">
@@ -57,17 +69,17 @@
                                             <!-- Content -->
                                             <div class="mb-3">
                                                 <label for="content" class="form-label">Content</label>
-                                                <textarea class="form-control bg-white text-black" id="content" name="text" rows="6" required>{{ old('content', $menu->text) }}</textarea>
+                                                <textarea class="form-control bg-white text-black  tinymce-editor" id="content" name="text" rows="6" required>{{ old('content', $menu->text) }}</textarea>
                                             </div>
                                             <!-- ingredients -->
                                             <div class="mb-3">
                                                 <label for="ingredients" class="form-label">ingredients</label>
-                                                <textarea class="form-control  bg-white text-black" id="ingredients" name="ingredients" rows="6" required>{{ old('content', $menu->ingredients) }}</textarea>
+                                                <textarea class="form-control  tinymce-editor " id="ingredients" name="ingredients" rows="6" required>{{ old('content', $menu->ingredients) }}</textarea>
                                             </div>
                                             <!-- directions -->
                                             <div class="mb-3">
                                                 <label for="directions" class="form-label">directions</label>
-                                                <textarea class="form-control  bg-white text-black" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
+                                                <textarea class="form-control  bg-white text-black  tinymce-editor" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
                                             </div>
                                             <!-- Submit Button -->
                                             <button type="submit" class="btn btn-primary">Save Changes</button>
