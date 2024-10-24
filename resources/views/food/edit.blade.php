@@ -11,6 +11,11 @@
             height: 400  // Adjust height as per your need
         });
     </script>
+
+
+
+
+
 --}}
     <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
         <x-slot name="header">
@@ -108,6 +113,10 @@
                 toast.show();
             }
         });
+
+
+
+
     </script>
 
 

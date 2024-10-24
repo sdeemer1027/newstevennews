@@ -11,4 +11,21 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    // Split out node_modules into separate chunks
+                    if (id.includes('node_modules')) {
+                        const moduleName = id.split('node_modules/')[1].split('/')[0];
+                        if (moduleName === 'tinymce') {
+                            return 'tinymce'; // Create a chunk specifically for TinyMCE
+                        }
+                        return moduleName;
+                    }
+                },
+            },
+        },
+        chunkSizeWarningLimit: 600, // Adjust this value if necessary
+    },
 });
