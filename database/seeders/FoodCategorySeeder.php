@@ -16,18 +16,18 @@ class FoodCategorySeeder extends Seeder
     {
         // Insert sample data into foodcategories table
         DB::table('foodcategories')->insert([
-            ['name' => 'Appetizers'],
-            ['name' => 'Beverages'],
-            ['name' => 'Breads'],
-            ['name' => 'Breakfast'],
-            ['name' => 'Desserts'],
-            ['name' => 'Main Dishes'],
-            ['name' => 'Salads'],
-            ['name' => 'Sandwiches'],
-            ['name' => 'Sauces, Condiments & Dressings'],
-            ['name' => 'Side Dishes'],
-            ['name' => 'Snacks'],
-            ['name' => 'Soups & Stews'],
+            ['id'=> '1', 'name' => 'Appetizers'],
+            ['id'=> '2', 'name' => 'Beverages'],
+            ['id'=> '3', 'name' => 'Breads'],
+            ['id'=> '4', 'name' => 'Breakfast'],
+            ['id'=> '5', 'name' => 'Desserts'],
+            ['id'=> '6', 'name' => 'Main Dishes'],
+            ['id'=> '7', 'name' => 'Salads'],
+            ['id'=> '8', 'name' => 'Sandwiches'],
+            ['id'=> '9', 'name' => 'Sauces, Condiments & Dressings'],
+            ['id'=> '10', 'name' => 'Side Dishes'],
+            ['id'=> '11', 'name' => 'Snacks'],
+            ['id'=> '12', 'name' => 'Soups & Stews'],
         ]);
     }
 }
