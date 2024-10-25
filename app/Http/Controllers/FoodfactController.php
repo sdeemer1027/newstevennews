@@ -162,7 +162,7 @@ $foodname = Food::where('id',$menu)->first();
     //    dd($request, $id);
 // Validate the request ingredients":"","directions":"","food_id":76,
         $request->validate([
-            'text' => 'required|string|max:255',
+            'text' => 'required',
             'ingredients' => 'required', // HTML content
             'directions' => 'required',
         ]);
