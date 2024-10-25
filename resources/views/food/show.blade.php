@@ -59,6 +59,7 @@
 
                                     </style>
                                       <div id="meal" class="mymeal">
+                                          <h2>{{$recipes->food->name}}</h2>
                                           <!-- Display the current image if it exists  550px-->
                                           @if($recipes->picture_url)
                                               <div>
@@ -66,7 +67,7 @@
                                               </div>
                                           @endif
 
-                                          {{$recipes->food->name}}
+                                          {{--$recipes->food->name--}}
                                           <BR><BR>
                                               {!! $recipes->text !!} <hr>
                                               {!! $recipes->ingredients !!}<HR>
