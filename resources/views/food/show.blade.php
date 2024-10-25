@@ -1,4 +1,15 @@
+@section('title', $recipes->name)
+
+@section('meta')
+    <meta property="og:title" content="{{ $recipes->name }}" />
+    <meta property="og:description" content="{{ Str::limit(strip_tags($recipes->text), 100) }}" />
+    <meta property="og:image" content="{{ Storage::url($recipes->picture_url) }}" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:type" content="article" />
+@endsection
+
 <x-app-layout>
+
 
     <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
         <x-slot name="header">
@@ -90,6 +101,11 @@
                                         {{$recipes}} --}}
 
 
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}"
+                                           target="_blank"
+                                           class="btn btn-primary">
+                                            Share on Facebook
+                                        </a>
 
                                         {{--
 

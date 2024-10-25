@@ -101,6 +101,9 @@
             }
 
         </style>
+
+        <!-- Dynamic Meta Tags -->
+        @yield('meta')
     </head>
     <body class="font-sans antialiased dark_mode">
     <!-- Toast notification container -->
