@@ -23,8 +23,9 @@
                                 <div class="col-md-9">
                                 @if($recipes && $recipes->id)
                                     <!-- If $recipes exists and has an ID, show the Edit link -->
+                                        @if(Auth::id() === 1)
                                         <a href="{{ route('food.menu.edit', $recipes->id) }}">Edit</a>
-
+                                        @endif
                                       <div id="meal">
                                           <!-- Display the current image if it exists -->
                                           @if($recipes->picture_url)
