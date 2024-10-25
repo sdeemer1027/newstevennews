@@ -130,7 +130,9 @@ $product = collect($response); // Convert the product data to a collection
     public function bycategory($cat)
     {
 
-        $recipe = Food::with('category','recipes')->where('foodcategory_id',$cat)->get();
+        $recipe = Food::with('category','recipes')->where('foodcategory_id',$cat)
+            ->where('updated_at',NULL)
+            ->get();
         $foodcategory = FoodCategory::all();
         return view('food.index',compact('foodcategory','recipe')); // Ensure this matches your Blade view file name
     }
