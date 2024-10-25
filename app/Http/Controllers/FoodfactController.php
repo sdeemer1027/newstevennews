@@ -201,7 +201,7 @@ $foodname = Food::where('id',$menu)->first();
   //      $meal->food_id = $request->input('category');
         $meal->ingredients = $request->input('ingredients'); // Assume content stores HTML
         $meal->directions = $request->input('directions');
-
+        $meal->updated_at = now();
         // Save the changes
         $meal->save();
 //dd($meal);

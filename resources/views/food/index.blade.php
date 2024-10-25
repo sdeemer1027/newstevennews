@@ -35,13 +35,13 @@
                                         @endforeach
                                         </table>
                                     </div>
-
-
+{{--$recipes--}}
+{{--$meal--}}
                                 </div>
 
                                 {{--$foodcategory--}}
                                 <HR>
-                                {{$recipe}}
+                                {{--$recipe--}}
                             </div>
                         </div>
                     </div>
