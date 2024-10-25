@@ -17,5 +17,17 @@ class Recipe extends Model
     {
         return $this->belongsTo(Food::class, 'food_id');
     }
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class, 'recipe_id');
+    }
 
+    public function averageRating()
+    {
+        return $this->ratings()->avg('rating');
+    }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

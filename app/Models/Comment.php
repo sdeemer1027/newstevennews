@@ -9,6 +9,20 @@ class Comment extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['body', 'user_id', 'recipe_id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function recipe()
+    {
+        return $this->belongsTo(Recipe::class);
+    }
+
+
+ /*
     protected $fillable = ['content', 'user_id', 'blog_id'];
 
     // A comment belongs to a blog post
@@ -22,4 +36,5 @@ class Comment extends Model
     {
         return $this->belongsTo(User::class);
     }
+    */
 }

@@ -81,6 +81,90 @@
                                     <!-- If $recipes is null or doesn't have an ID, show the Create link -->
                                         <a href="{{ route('food.menu.create',$foodname->id) }}">Create</a>
                                     @endif
+
+                                    <div>
+                                        <h3>{{ $recipes->name }}</h3>
+                                        <p>Average Rating: {{ round($recipes->averageRating(), 1) }} / 5</p>
+                                        <!-- Display the rating count -->
+                                        {{--    <p>{{ $recipes->ratings_count }} people have rated this recipe</p>
+                                        {{$recipes}} --}}
+
+
+
+                                        {{--
+
+                                                                                <h3>Comments</h3>
+
+                                                                                @foreach ($recipes->comments as $comment)
+                                                                                    <div class="comment">
+                                                                                        <strong>{{ $comment->user->name }}</strong>
+                                                                                    <p>{{ $comment->body }}</p>
+                                                                                        <small>{{ $comment->created_at->diffForHumans() }}</small>
+                                                                                    </div>
+                                                                                @endforeach
+                                        {{--
+                                                                                @auth
+
+                                                                                    <form action="{{ route('recipes.comment', $recipes->id) }}" method="POST">
+                                                                                        @csrf
+                                                                                        <div>
+                                                                                            <label for="body">Add a Comment:</label>
+                                                                                            <textarea name="body" id="body" rows="3" required></textarea>
+                                                                                        </div>
+                                                                                        <button type="submit">Post Comment</button>
+                                                                                    </form>
+
+                                                                                @else
+                                                                                    <p><a href="{{ route('login') }}">Log in</a> to add a comment.</p>
+                                                                                @endauth
+                                        --}}
+
+
+                                    </div>
+<style>
+    /* Container styling */
+    .star-rating {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+
+    /* Default (unfilled) stars */
+    .star {
+        color: #ccc; /* Light grey */
+    }
+
+    /* Hover effect: only stars up to the hovered one change color */
+    .star:hover,
+    .star.hovered {
+        color: orange; /* Orange color on hover */
+    }
+
+    /* Selected stars: only stars up to the clicked one stay orange */
+    .star.selected {
+        color: orange; /* Orange when selected */
+    }
+
+
+</style>
+                                    @if(Auth::check())
+                                        <form action="{{ route('recipes.rate', $recipes->id) }}" method="POST" id="ratingForm">
+                                            @csrf
+                                            <div class="star-rating">
+                                                <input type="hidden" name="rating" id="ratingInput">
+
+                                                <!-- Create clickable stars -->
+                                                <span class="star" data-value="1">&#9734;</span>
+                                                <span class="star" data-value="2">&#9734;</span>
+                                                <span class="star" data-value="3">&#9734;</span>
+                                                <span class="star" data-value="4">&#9734;</span>
+                                                <span class="star" data-value="5">&#9734;</span>
+                                            </div>
+                                            <button type="submit" class="submit-button">Submit Rating</button>
+                                        </form>
+                                    @endif
+
+
                                 </div>
 
                             </div>
@@ -102,6 +186,39 @@
                 toast.show();
             }
         });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star');
+            const ratingInput = document.getElementById('ratingInput');
+
+            stars.forEach((star, index) => {
+                // Hover: Highlight stars up to the hovered one
+                star.addEventListener('mouseover', () => {
+                    stars.forEach((s, i) => {
+                        s.classList.toggle('hovered', i <= index);
+                    });
+                });
+
+                // Remove hover effect when mouse leaves the star
+                star.addEventListener('mouseout', () => {
+                    stars.forEach(s => s.classList.remove('hovered'));
+                });
+
+                // Click: Set rating and apply selected class
+                star.addEventListener('click', () => {
+                    const ratingValue = index + 1;
+                    ratingInput.value = ratingValue;
+
+                    // Mark only stars up to the clicked one as selected
+                    stars.forEach((s, i) => {
+                        s.classList.toggle('selected', i < ratingValue);
+                    });
+                });
+            });
+        });
+
+
     </script>
 
 

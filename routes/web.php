@@ -94,7 +94,9 @@ Route::get('/menu/recipe/create/{foodname?}', [FoodfactController::class, 'creat
 Route::post('/menu/recipe/create/{foodname?}', [BlogController::class, 'store'])->name('food.menu.store');
 Route::get('/food/recipe/{menu}/edit',[FoodfactController::class, 'editfood'])->name('food.menu.edit');
 Route::put('/food/recipe/{menu}', [FoodfactController::class, 'update'])->name('food.menu.update');
-
+Route::post('/recipes/{recipe}/rate', [RecipeController::class, 'rate'])->name('recipes.rate');
+Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');
+Route::post('/recipes/{id}/comments', [RecipeController::class, 'addComment'])->middleware('auth')->name('recipes.comment');
 
 Route::resource('recipes', RecipeController::class)->except(['create', 'edit']);
 
