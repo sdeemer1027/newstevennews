@@ -62,7 +62,7 @@
                                           <!-- Display the current image if it exists -->
                                           @if($recipes->picture_url)
                                               <div>
-                                                  <img src="{{ Storage::url($recipes->picture_url) }}" alt="Current Image" style="max-width: 150px;">
+                                                  <img src="{{ Storage::url($recipes->picture_url) }}" alt="Current Image" style="max-width: 350px;">
                                               </div>
                                           @endif
 
