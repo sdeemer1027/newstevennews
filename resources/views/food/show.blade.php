@@ -26,7 +26,24 @@
                                         @if(Auth::id() === 1)
                                         <a href="{{ route('food.menu.edit', $recipes->id) }}">Edit</a>
                                         @endif
-                                      <div id="meal">
+
+                                    <style>
+                                        .mymeal ul {
+                                            list-style-type: disc;
+                                            padding-left: 20px; /* Ensures bullets are indented */
+                                        }
+
+                                        .mymeal ol {
+                                            list-style-type: decimal;
+                                            padding-left: 20px; /* Ensures numbers are indented */
+                                        }
+
+                                        .mymeal li {
+                                            margin-bottom: 5px; /* Space between list items */
+                                        }
+
+                                    </style>
+                                      <div id="meal" class="mymeal">
                                           <!-- Display the current image if it exists -->
                                           @if($recipes->picture_url)
                                               <div>
