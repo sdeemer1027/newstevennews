@@ -50,7 +50,7 @@
                                                 <th>Category</th>
                                             </tr>
 
-                                        @foreach($recipe as $meal)
+                                        @foreach($recipes as $meal)
                                             <tr  class="bg-black">
                                                 <td>
                                                     @foreach ($meal->recipes as $recipe)
@@ -84,11 +84,48 @@
                                             </tr>
                                         @endforeach
                                         </table>
+
                                     </div>
+
 {{--$recipes--}}
 {{--$meal--}}
                                 </div>
+                                <style>
+                                    /* Full-width pagination container with gray-800 background */
+                                    .pagination-links nav {
+                                        background-color: #2d3748; /* gray-800 */
+                                        width: 100%; /* Full width */
+                                        padding: 10px;
+                                        border-radius: 5px;
+                                        text-align: center; /* Center align pagination links */
+                                    }
 
+                                    /* Styling for individual pagination links with gray text */
+                                    .pagination-links .pagination .page-item .page-link {
+                                        color: #4a5568; /* gray-700 text */
+                                        background-color: #2d3748; /* gray-800 background */
+                                        border-color: #4a5568; /* gray-700 border */
+                                        margin: 0 5px; /* Space between links */
+                                    }
+
+                                    /* Hover effect for pagination links */
+                                    .pagination-links .pagination .page-item .page-link:hover {
+                                        background-color: #4a5568; /* gray-700 on hover */
+                                        border-color: #2d3748; /* gray-800 border */
+                                    }
+
+                                    /* Active page styling */
+                                    .pagination-links .pagination .page-item.active .page-link {
+                                        background-color: #4a5568; /* gray-700 */
+                                        color: white; /* White text for active link */
+                                        border-color: #4a5568; /* gray-700 */
+                                    }
+                                </style>
+
+                                <div class="pagination-links">
+                                    {{ $recipes->links() }}
+                                </div>
+                                {{-- $recipes->links() --}}
                                 {{--$foodcategory--}}
                                 <HR>
                                 {{--$recipe--}}

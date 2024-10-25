@@ -120,12 +120,12 @@ $product = collect($response); // Convert the product data to a collection
     public function menu()
     {
  //       $foodcategory = '';
-        $recipe = Food::with('category','recipes')->limit(10)->get();
+        $recipes = Food::with('category','recipes')->limit(10)->paginate(10); //->get();
 
 //dd($recipe);
 
         $foodcategory = FoodCategory::get(); //all();
-        return view('food.index',compact('foodcategory','recipe')); // Ensure this matches your Blade view file name
+        return view('food.index',compact('foodcategory','recipes')); // Ensure this matches your Blade view file name
     }
     public function bycategory($cat)
     {
