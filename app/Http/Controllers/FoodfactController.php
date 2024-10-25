@@ -120,7 +120,7 @@ $product = collect($response); // Convert the product data to a collection
     public function menu()
     {
  //       $foodcategory = '';
-        $recipes = Food::with('category','recipes')->limit(10)->paginate(10); //->get();
+        $recipes = Food::with('category','recipes')->paginate(10); //->get();
 
 //dd($recipe);
 
@@ -130,11 +130,11 @@ $product = collect($response); // Convert the product data to a collection
     public function bycategory($cat)
     {
 
-        $recipe = Food::with('category','recipes')->where('foodcategory_id',$cat)
-            ->where('updated_at',NULL)
-            ->get();
+        $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
+            ->where('updated_at',NULL)->paginate(10);
+   //         ->get();
         $foodcategory = FoodCategory::all();
-        return view('food.index',compact('foodcategory','recipe')); // Ensure this matches your Blade view file name
+        return view('food.index',compact('foodcategory','recipes')); // Ensure this matches your Blade view file name
     }
     public function showfood($menu)
     {

@@ -64,7 +64,7 @@
 
 
                                                 </td>
-                                                <td><a href="{{route('food.menu',$meal->id)}}">{{$meal->name}}</a>
+                                                <td><a href="{{route('food.menu',$meal->id)}}">{{$meal->name}}
                                                     @foreach ($meal->recipes as $recipe)
                                                         @if(!empty($recipe->text))
                                                             <div class="recipe-text">
@@ -74,7 +74,7 @@
 
                                                     @endforeach
 
-
+                                                    </a>
 
 
 
