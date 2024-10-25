@@ -1,4 +1,5 @@
 <x-app-layout>
+    <script src="/js/tinymce/tinymce.min.js"></script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             Create a New Blog
@@ -45,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label for="content">Blog Content:</label>
-                    <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+                    <textarea class="form-control tinymce-editor" id="content" name="content" rows="5" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Create Blog</button>
@@ -53,6 +54,19 @@
         </div>
 
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            tinymce.init({
+
+                selector: 'textarea.tinymce-editor',
+                plugins: 'code',
+                toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
+                height: 400
+            });
+
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $('#title').on('input', function() {

@@ -106,6 +106,7 @@
                                            class="btn btn-primary">
                                             Share on Facebook
                                         </a>
+
                                         <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(url()->current()) }}&title={{ urlencode($recipes->name) }}&summary={{ urlencode(Str::limit(strip_tags($recipes->text), 100)) }}" target="_blank" class="btn btn-primary">
                                             Share on LinkedIn
                                         </a>
