@@ -41,6 +41,21 @@
                                         .mymeal li {
                                             margin-bottom: 5px; /* Space between list items */
                                         }
+                                        .mymeal h2 {
+                                            font-size: 1.5em;
+                                            color: #ffffff; /* Dark gray for better readability */
+                                            margin-top: 20px;
+                                            margin-bottom: 10px;
+                                            font-weight: bold;
+                                        }
+
+                                        .mymeal h3 {
+                                            font-size: 1.25em;
+                                            color: #ffffff; /* Slightly lighter gray */
+                                            margin-top: 15px;
+                                            margin-bottom: 8px;
+                                            font-weight: bold;
+                                        }
 
                                     </style>
                                       <div id="meal" class="mymeal">
