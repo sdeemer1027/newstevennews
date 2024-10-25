@@ -6,6 +6,7 @@ use App\Models\Food;
 use App\Models\FoodCategory;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
@@ -133,7 +134,15 @@ $product = collect($response); // Convert the product data to a collection
     }
     public function bycategory($cat)
     {
-
+        if (Auth::user()->id === 1) {
+            // Logic for user with ID = 1
+            $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
+                ->where('updated_at',NULL)->paginate(10);
+        } else {
+            // Logic for other users
+            $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
+                ->paginate(10);
+        }
         $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
             ->where('updated_at',NULL)->paginate(10);
    //         ->get();
