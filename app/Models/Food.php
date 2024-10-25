@@ -16,8 +16,12 @@ class Food extends Model
         return $this->belongsTo(FoodCategory::class, 'foodcategory_id');
     }
 
+ //   public function recipes()
+ //   {
+ //       return $this->belongsTo(Recipe::class,'food_id');
+ //   }
     public function recipes()
     {
-        return $this->belongsTo(Recipe::class,'food_id');
+        return $this->hasMany(Recipe::class, 'food_id'); // Assuming food_id is the foreign key in recipes table
     }
 }

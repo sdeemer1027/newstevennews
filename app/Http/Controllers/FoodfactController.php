@@ -120,7 +120,7 @@ $product = collect($response); // Convert the product data to a collection
     public function menu()
     {
  //       $foodcategory = '';
-        $recipe = Food::with('category')->get();
+        $recipe = Food::with('category','recipes')->limit(10)->get();
 
 //dd($recipe);
 

@@ -17,4 +17,5 @@ class Recipe extends Model
     {
         return $this->belongsTo(Food::class, 'food_id');
     }
+
 }
