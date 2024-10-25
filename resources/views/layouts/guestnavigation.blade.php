@@ -14,6 +14,9 @@
                     <x-responsive-nav-link :href="route('ham.index')">
                         {{ __('Videos') }}
                     </x-responsive-nav-link>
+                    <x-responsive-nav-link :href="route('food.index')">
+                        {{ __('Food') }}
+                    </x-responsive-nav-link>
                 </div>
             </div>
 
@@ -84,6 +87,7 @@
                         @if (Route::has('register'))
                             <a class="block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out scrollto" href="{{ route('register') }}">Register</a>
                         @endif
+
                     @endauth
 
                 @endif
@@ -146,6 +150,8 @@
                         @if (Route::has('register'))
                             <a class="block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out scrollto" href="{{ route('register') }}">Register</a>
                     @endif
+                        <a class="block w-full px-4 py-2 text-start text-sm leading-5 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-800 transition duration-150 ease-in-out" href="{{ route('food.index') }}">Food</a>
+
                 @endauth
 
             @endif

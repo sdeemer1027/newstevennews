@@ -119,11 +119,7 @@ $product = collect($response); // Convert the product data to a collection
     // Show the barcode scanning view
     public function menu()
     {
- //       $foodcategory = '';
         $recipes = Food::with('category','recipes')->paginate(10); //->get();
-
-//dd($recipe);
-
         $foodcategory = FoodCategory::get(); //all();
         return view('food.index',compact('foodcategory','recipes')); // Ensure this matches your Blade view file name
     }
