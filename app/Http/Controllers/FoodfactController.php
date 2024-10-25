@@ -134,17 +134,16 @@ $product = collect($response); // Convert the product data to a collection
     }
     public function bycategory($cat)
     {
+        $recipesQuery = Food::with('category', 'recipes')
+            ->where('foodcategory_id', $cat);
+
+        // Add conditionally if user ID = 1
         if (Auth::check() && Auth::id() === 1) {
-            // Logic for user with ID = 1
-            $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
-                ->where('updated_at',NULL)->paginate(10);
-        } else {
-            // Logic for other users
-            $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
-                ->paginate(10);
+            $recipesQuery->whereNull('updated_at');
         }
-        $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
-            ->where('updated_at',NULL)->paginate(10);
+
+        // Finalize query with pagination
+        $recipes = $recipesQuery->paginate(10);
    //         ->get();
         $foodcategory = FoodCategory::withCount('recipes')->get();
         $currentCategory = FoodCategory::find($cat);
