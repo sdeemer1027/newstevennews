@@ -6,6 +6,7 @@ use App\Models\Food;
 use App\Models\FoodCategory;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 use OpenFoodFacts;
@@ -120,7 +121,14 @@ $product = collect($response); // Convert the product data to a collection
     public function menu()
     {
         $recipes = Food::with('category','recipes')->paginate(10); //->get();
-        $foodcategory = FoodCategory::get(); //all();
+        $foodcategory = FoodCategory::withCount('recipes')->get(); //all();
+/*
+        $foodcategory = DB::table('food_categories')
+            ->leftJoin('foods', 'food_categories.id', '=', 'foods.foodcategory_id')
+            ->select('food_categories.name', DB::raw('count(foods.id) as recipe_count'))
+            ->groupBy('food_categories.id')
+            ->get();
+        */
         return view('food.index',compact('foodcategory','recipes')); // Ensure this matches your Blade view file name
     }
     public function bycategory($cat)
@@ -129,14 +137,14 @@ $product = collect($response); // Convert the product data to a collection
         $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
             ->where('updated_at',NULL)->paginate(10);
    //         ->get();
-        $foodcategory = FoodCategory::all();
+        $foodcategory = FoodCategory::withCount('recipes')->get();
         $currentCategory = FoodCategory::find($cat);
         return view('food.index',compact('foodcategory','recipes','currentCategory')); // Ensure this matches your Blade view file name
     }
     public function showfood($menu)
     {
         $recipes = Recipe::where('food_id', $menu)->with('food')->first();
-        $foodcategory = FoodCategory::all();
+        $foodcategory = FoodCategory::withCount('recipes')->get();
 $foodname = Food::where('id',$menu)->first();
    //     dd($recipes,$menu,$foodname);
 

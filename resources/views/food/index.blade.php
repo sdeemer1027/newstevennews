@@ -19,12 +19,12 @@
                         @else
                             Food Catalog
                         @endif
-                        
+
                         <div class="container-fluid my-3">
                             <div class="row">
                                 <div class="col-md-3">
                                     @foreach($foodcategory as $fcategory)
-                                        <li><a href="{{route('food.bycategory' ,$fcategory->id)}}">{{$fcategory->name}}</a></li>
+                                        <li><a href="{{route('food.bycategory' ,$fcategory->id)}}">{{$fcategory->name}}</a> [{{ $fcategory->recipes_count }}]</li>
                                     @endforeach
                                 </div>
                                 <div class="col-md-9">
