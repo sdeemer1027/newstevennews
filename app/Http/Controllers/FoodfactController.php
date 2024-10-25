@@ -134,7 +134,7 @@ $product = collect($response); // Convert the product data to a collection
     }
     public function bycategory($cat)
     {
-        if (Auth::user()->id === 1) {
+        if (Auth::check() && Auth::id() === 1) {
             // Logic for user with ID = 1
             $recipes = Food::with('category','recipes')->where('foodcategory_id',$cat)
                 ->where('updated_at',NULL)->paginate(10);
