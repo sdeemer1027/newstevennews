@@ -169,7 +169,7 @@ $foodname = Food::where('id',$menu)->first();
 
         // Find the blog by slug
         $meal = Recipe::where('id', $id)->firstOrFail();
-
+$fnow = Food::where('id',$meal->food_id)->firstOrFail();
 
         // Handle the file upload
         if ($request->hasFile('picture')) {
@@ -204,6 +204,8 @@ $foodname = Food::where('id',$menu)->first();
         $meal->updated_at = now();
         // Save the changes
         $meal->save();
+        $fnow->updated_at = now();
+        $fnow->save();
 //dd($meal);
         // Redirect to the blog show page
         return redirect()->route('food.menu', $meal->food_id)->with('success', 'Blog updated successfully.');
