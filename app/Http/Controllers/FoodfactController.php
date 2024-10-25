@@ -130,7 +130,8 @@ $product = collect($response); // Convert the product data to a collection
             ->where('updated_at',NULL)->paginate(10);
    //         ->get();
         $foodcategory = FoodCategory::all();
-        return view('food.index',compact('foodcategory','recipes')); // Ensure this matches your Blade view file name
+        $currentCategory = FoodCategory::find($cat);
+        return view('food.index',compact('foodcategory','recipes','currentCategory')); // Ensure this matches your Blade view file name
     }
     public function showfood($menu)
     {

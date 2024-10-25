@@ -12,7 +12,14 @@
             <div class="w-full mx-auto px-3 ">
                 <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black">
                     <div class="p-6 text-white dark:text-white">
-                        <a href="{{route('home')}}">Home</a> -> Food Catalog
+                        <a href="{{route('home')}}">Home</a> ->
+                        @if(isset($currentCategory))
+                            <a href="{{ route('food.index') }}">Food Catalog</a> ->
+                            {{ $currentCategory->name }}
+                        @else
+                            Food Catalog
+                        @endif
+                        
                         <div class="container-fluid my-3">
                             <div class="row">
                                 <div class="col-md-3">
