@@ -8,6 +8,7 @@
 
 
 
+    <script src="/js/tinymce/tinymce.min.js"></script>
 
     <div class="bg-gray-100 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg bg-black text-white">
         <x-slot name="header">
@@ -48,8 +49,8 @@
 
                                             <!-- Slug -->
                                             <div class="mb-3">
-                                                <label for="slug" class="form-label">Name</label>
-                                                <input type="text" class="form-control bg-white text-black" id="name" name="name" value="{{ old('name', $menu->food->name) }}" required>
+                                                <label for="name" class="form-label">Name</label>
+                                                <input type="text" class="form-control bg-white text-black" id="name" name="name" value="{{ old('name', $menu->food->name) }}" required autocomplete="{{$menu->food->name}}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="category">Category:</label>
@@ -78,7 +79,7 @@
                                                 <label for="directions" class="form-label">directions</label>
                                                 <textarea class="form-control  bg-white text-black  tinymce-editor" id="directions" name="directions" rows="6" required>{{ old('content', $menu->directions) }}</textarea>
 
-                                                <textarea class="tinymce-editor"></textarea>
+
 
                                             </div>
                                             <!-- Submit Button -->
@@ -98,6 +99,20 @@
 
         </div>
     </div>
+    <!-- JavaScript Initialization -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            tinymce.init({
+
+                selector: 'textarea.tinymce-editor',
+                plugins: 'code',
+                toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
+                height: 400
+            });
+
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var toastEl = document.getElementById('toast');
@@ -108,22 +123,6 @@
                 toast.show();
             }
         });
-
-
-
-
     </script>
-{{--
-    <script>
-        tinymce.init({
-            selector: 'textarea.tinymce-editor',  // Select your textarea to apply TinyMCE
-            plugins: 'code',  // Enable plugins like code editing
-            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
-            height: 400  // Adjust height as per your need
-        });
-    </script>
---}}
-
-
 </x-app-layout>
 
