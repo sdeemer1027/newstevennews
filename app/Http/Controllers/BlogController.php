@@ -29,7 +29,7 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
-            'content' => 'required|string',
+            'content' => 'required',
             'categories' => 'required|array',
         ]);
 
