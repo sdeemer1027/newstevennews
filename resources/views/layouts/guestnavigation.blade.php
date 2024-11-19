@@ -110,9 +110,7 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-
-                {{ __('Dashboard') }}
+        <div class="pt-2 pb-3 space-y-1 text-white">
 
         </div>
 

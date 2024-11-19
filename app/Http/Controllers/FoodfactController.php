@@ -123,6 +123,8 @@ $product = collect($response); // Convert the product data to a collection
     {
         $recipes = Food::with('category','recipes')->paginate(10); //->get();
         $foodcategory = FoodCategory::withCount('recipes')->get(); //all();
+
+      //  dd($recipes);
 /*
         $foodcategory = DB::table('food_categories')
             ->leftJoin('foods', 'food_categories.id', '=', 'foods.foodcategory_id')
